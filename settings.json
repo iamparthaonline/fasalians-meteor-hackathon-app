@@ -1,0 +1,9 @@
+{
+    "serviceConfigurations": {
+        "google": {
+            "clientId": "609269852376-9rq4kgtmvcn52po456bu8kjlsgjod998.apps.googleusercontent.com",
+            "secret": "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",
+            "loginStyle": "popup"
+        }
+    }
+}
