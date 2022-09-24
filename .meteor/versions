@@ -59,6 +59,7 @@ mongo@1.15.0
 mongo-decimal@0.1.3
 mongo-dev-server@1.1.0
 mongo-id@1.0.8
+mrspark2591:vue-sass@0.1.2
 npm-mongo@4.3.1
 oauth@2.1.2
 oauth2@1.3.1
