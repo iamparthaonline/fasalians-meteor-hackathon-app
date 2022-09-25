@@ -3,7 +3,7 @@
     <TopNavBar
       :title="`${getCurrentGreetingsMessage()}, ${user.profile.name}`"
       icon="mdi-account-circle-outline"
-      @handle-click="$router.push({name: 'publicProfile'})"
+      @handle-click="$router.push({name: 'profile'})"
     />
     <div class="dashboard-page">
       <Digest/>

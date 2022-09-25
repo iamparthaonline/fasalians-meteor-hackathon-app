@@ -16,4 +16,17 @@ Meteor.methods({
       },
     );
   },
+  updateUserDetails(_id, username, useraddress, userGender, userState) {
+    Meteor.users.update(
+      {_id},
+      {
+        $set: {
+          'profile.name': username,
+          'profile.address': useraddress,
+          'profile.gender': userGender,
+          'profile.state': userState,
+        },
+      },
+    );
+  },
 });
