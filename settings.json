@@ -5,5 +5,8 @@
             "secret": "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",
             "loginStyle": "popup"
         }
+    },
+    "public": {
+        "WEATHER_API_KEY": "aead9d7fa9928e0d4b4cb5db2c61ab55"
     }
 }
