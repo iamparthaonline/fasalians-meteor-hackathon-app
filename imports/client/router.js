@@ -58,6 +58,22 @@ const router = new VueRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/report',
+      name: 'report',
+      component: () => import('./pages/report/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/report-details/:id',
+      name: 'report-details',
+      component: () => import('./pages/reportDetails/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
   ],
   mode: 'history',
 });

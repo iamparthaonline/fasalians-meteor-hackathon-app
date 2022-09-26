@@ -8,5 +8,11 @@
     },
     "public": {
         "WEATHER_API_KEY": "aead9d7fa9928e0d4b4cb5db2c61ab55"
-    }
+    },
+    "imageKit": {
+        "publicKey": "public_0Gl4gqzUWfq8OZ6Gh1joB8zhjXI=",
+        "privateKey": "private_2zfL5+rynkAE9ToJnsuoDHOztKE=",
+        "urlEndpoint": "https://ik.imagekit.io/fasalians"
+    },
+    "plantHealthAPI": ""
 }
