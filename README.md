@@ -32,7 +32,7 @@ Install Meteor in your system first. Then run below commands,
 
 ```bash
   meteor npm install
-  meteor
+  npm start
 ```
 
 ## Low Fidelity Idea Wireframe
