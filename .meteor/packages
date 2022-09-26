@@ -25,3 +25,4 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 accounts-google
 service-configuration
 mrspark2591:vue-sass
+http

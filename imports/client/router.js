@@ -42,6 +42,30 @@ const router = new VueRouter({
       name: 'notFound',
       component: () => import('./pages/404/index.vue'),
     },
+    {
+      path: '/onboarding',
+      name: 'onboarding',
+      component: () => import('./pages/onboarding/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('./pages/profile/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/edit-profile',
+      name: 'editProfile',
+      component: () => import('./pages/editProfile/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
   ],
   mode: 'history',
 });
