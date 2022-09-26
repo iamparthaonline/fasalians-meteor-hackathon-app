@@ -6,7 +6,7 @@
       @handle-click="$router.push({name: 'profile'})"
     />
     <div class="dashboard-page">
-      <Digest/>
+      <Digest />
       <div class="my-2 text-center">
         <v-btn v-if="user.profile.isAdmin && !todaysDigest" outlined color="primary" @click="goToDigestCreation">
           Add today's digest
@@ -18,7 +18,7 @@
       </div>
 
       <Weather />
-      <Challanges/>
+      <Challanges />
     </div>
     <BottomNavBar active-page="dashboard" />
   </div>
@@ -37,7 +37,7 @@
       Weather,
       BottomNavBar,
       TopNavBar,
-      Challanges
+      Challanges,
     },
     meteor: {
       user: () => Meteor.user(),
@@ -65,7 +65,7 @@
       },
       goToModeration() {
         this.$router.push({name: 'contentModeration'});
-      }
+      },
     },
   };
 </script>

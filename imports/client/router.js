@@ -30,6 +30,18 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/explore',
+      name: 'explore',
+      component: () => import('./pages/explore/index.vue'),
+      beforeEnter: (_, _1, next) => {
+        if (!Meteor.userId()) next({name: 'login', replace: true});
+        else next();
+      },
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
       path: '*',
       name: 'notFound',
       component: () => import('./pages/404/index.vue'),
