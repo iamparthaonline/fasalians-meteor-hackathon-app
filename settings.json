@@ -1,23 +1,27 @@
 {
-    "serviceConfigurations": {
-        "google": {
-            "clientId": "609269852376-9rq4kgtmvcn52po456bu8kjlsgjod998.apps.googleusercontent.com",
-            "secret": "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",
-            "loginStyle": "popup"
-        }
-    },
-    "public": {
-        "WEATHER_API_KEY": "aead9d7fa9928e0d4b4cb5db2c61ab55"
-    },
-    "imageKit": {
-        "publicKey": "public_0Gl4gqzUWfq8OZ6Gh1joB8zhjXI=",
-        "privateKey": "private_2zfL5+rynkAE9ToJnsuoDHOztKE=",
-        "urlEndpoint": "https://ik.imagekit.io/fasalians"
-    },
-    "plantHealthAPI": "https://meteorplantf.herokuapp.com/",
-    "galaxy.meteor.com": {
-        "env": {
-            "MONGO_URL": "mongodb://fasalians:5GFP5XygcNxwqoBO@ac-hoorrhd-shard-00-00.xadw3oy.mongodb.net:27017,ac-hoorrhd-shard-00-01.xadw3oy.mongodb.net:27017,ac-hoorrhd-shard-00-02.xadw3oy.mongodb.net:27017/?ssl=true&replicaSet=atlas-iqrvpc-shard-0&authSource=admin&retryWrites=true&w=majority"
-        }
+  "serviceConfigurations": {
+    "google": {
+      "clientId": "609269852376-9rq4kgtmvcn52po456bu8kjlsgjod998.apps.googleusercontent.com",
+      "secret": "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",
+      "loginStyle": "popup"
     }
+  },
+  "public": {
+    "WEATHER_API_KEY": "aead9d7fa9928e0d4b4cb5db2c61ab55"
+  },
+  "imageKit": {
+    "publicKey": "public_0Gl4gqzUWfq8OZ6Gh1joB8zhjXI=",
+    "privateKey": "private_2zfL5+rynkAE9ToJnsuoDHOztKE=",
+    "urlEndpoint": "https://ik.imagekit.io/fasalians"
+  },
+  "plantHealthAPI": "https://meteorplantf.herokuapp.com/",
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://fasalians:5GFP5XygcNxwqoBO@ac-hoorrhd-shard-00-00.xadw3oy.mongodb.net:27017,ac-hoorrhd-shard-00-01.xadw3oy.mongodb.net:27017,ac-hoorrhd-shard-00-02.xadw3oy.mongodb.net:27017/?ssl=true&replicaSet=atlas-iqrvpc-shard-0&authSource=admin&retryWrites=true&w=majority"
+    }
+  },
+  "monti": {
+    "appId": "k92YYCxQ5yif9x7q2",
+    "appSecret": "6443cce2-eeb8-444e-a3ab-7abba243784a"
+  }
 }
