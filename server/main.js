@@ -6,4 +6,5 @@ import './digest/index';
 import './weather/index';
 import './report/index';
 import './forum/index';
+import './contentModeration/index';
 import './gamify/index';

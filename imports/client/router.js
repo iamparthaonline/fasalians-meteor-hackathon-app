@@ -130,6 +130,14 @@ const router = new VueRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/content-moderation',
+      name: 'contentModeration',
+      component: () => import('./pages/contentModeration/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
   ],
   mode: 'history',
 });
