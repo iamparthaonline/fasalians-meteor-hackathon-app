@@ -38,6 +38,14 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/saved',
+      name: 'saved',
+      component: () => import('./pages/saved/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/forum',
       name: 'forum',
       component: () => import('./pages/forum/index.vue'),

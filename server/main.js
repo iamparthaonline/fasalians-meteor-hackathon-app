@@ -1,4 +1,5 @@
 import './contents/index';
+import './favourites/index';
 import './serviceConfiguration/index';
 import './topics/index';
 import './users/index';
