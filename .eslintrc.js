@@ -31,5 +31,6 @@ module.exports = {
     Mongo: 'readonly',
     ServiceConfiguration: 'readonly',
     DateTime: 'writable',
+    cordova: 'readonly',
   },
 };

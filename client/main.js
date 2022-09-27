@@ -6,6 +6,7 @@ import '../imports/client/components/index';
 import App from '../imports/client/App.vue';
 import router from '../imports/client/router';
 import vuetify from '../imports/client/plugins/vuetify';
+import 'swiper/swiper-bundle.min.css';
 
 DateTime = luxon;
 Meteor.startup(() => {
