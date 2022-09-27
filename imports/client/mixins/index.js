@@ -1,2 +1,2 @@
 import './greet.Mixin';
-import './date.Mixin';
+import './date.mixin';
