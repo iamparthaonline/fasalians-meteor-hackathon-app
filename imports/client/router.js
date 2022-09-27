@@ -130,6 +130,14 @@ const router = new VueRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/digest-form',
+      name: 'digest-form',
+      component: () => import('./pages/digest/dailyDigestForm.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    }
   ],
   mode: 'history',
 });
