@@ -114,6 +114,14 @@ const router = new VueRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/public-profile/user/:userId',
+      name: 'public-profile',
+      component: () => import('./pages/TheRealPublicProfile/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
   ],
   mode: 'history',
 });
