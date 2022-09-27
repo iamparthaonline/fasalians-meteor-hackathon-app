@@ -1,12 +1,12 @@
 <template>
   <div class="post-container">
     <v-row v-if="!isWeb" align="center" justify="space-around" class="mx-1">
-      <v-btn outlined small color="primary" @click="insertImage">
+      <v-btn outlined small  color="primary" @click="insertImage">
         <v-icon left>mdi-upload</v-icon>
         Upload
       </v-btn>
       <v-avatar size="24">OR</v-avatar>
-      <v-btn small outlined color="primary" @click="takePhoto">
+      <v-btn small outlined  color="primary" @click="takePhoto">
         <v-icon left>mdi-camera</v-icon>
         Take Picture
       </v-btn>
