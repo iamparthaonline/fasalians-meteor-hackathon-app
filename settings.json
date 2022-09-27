@@ -14,5 +14,5 @@
         "privateKey": "private_2zfL5+rynkAE9ToJnsuoDHOztKE=",
         "urlEndpoint": "https://ik.imagekit.io/fasalians"
     },
-    "plantHealthAPI": ""
+    "plantHealthAPI": "https://meteorplantf.herokuapp.com/"
 }
