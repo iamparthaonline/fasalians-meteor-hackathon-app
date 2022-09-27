@@ -1,7 +1,7 @@
 <template>
   <v-app style="position: relative">
     <div class="top-bar">
-      <TopNavBar :title="userName ? `${userName}'s posts` : 'Forum'" :is-back-button="userName" />
+      <TopNavBar :title="userName ? `${userName}'s posts` : 'Forum'" :is-back-button="userName !== undefined" />
     </div>
     <div class="postContainer mb-12">
       <div v-if="loading">

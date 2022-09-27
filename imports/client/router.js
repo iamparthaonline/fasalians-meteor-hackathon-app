@@ -115,6 +115,22 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/public-profile/user/:userId',
+      name: 'public-profile',
+      component: () => import('./pages/TheRealPublicProfile/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/gamify',
+      name: 'gamify',
+      component: () => import('./pages/gamify/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/content-moderation',
       name: 'contentModeration',
       component: () => import('./pages/contentModeration/index.vue'),

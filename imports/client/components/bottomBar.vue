@@ -1,15 +1,33 @@
 <template>
   <div class="bottom-bar-container">
     <v-bottom-navigation v-model="value" :background-color="color" light shift>
-      <v-btn
-        v-for="{label, icon, route} in menuOptions"
-        :key="label"
-        :value="label"
-        @click="$router.push({name: route})"
-      >
-        <span>{{ label }}</span>
+      <v-btn value="dashboard" @click="$router.push({name: 'dashboard'})">
+        <span>Home</span>
 
-        <v-icon>{{ icon }}</v-icon>
+        <v-icon>mdi-home-variant-outline</v-icon>
+      </v-btn>
+
+      <v-btn value="explore" @click="$router.push({name: 'explore'})">
+        <span>Explore</span>
+
+        <v-icon>mdi-lightbulb-on-outline</v-icon>
+      </v-btn>
+
+      <v-btn value="forum" @click="$router.push({name: 'forum'})">
+        <span>Forum</span>
+
+        <v-icon>mdi-account-group-outline</v-icon>
+      </v-btn>
+
+      <!-- <v-btn value="ask-expert" @click="$router.push({name: 'ask-expert'})">
+        <span>Ask</span>
+
+        <v-icon>mdi-head-question-outline</v-icon>
+      </v-btn> -->
+
+      <v-btn value="report" @click="$router.push({name: 'report'})">
+        <span>Health</span>
+        <v-icon>mdi-bottle-tonic-plus-outline</v-icon>
       </v-btn>
     </v-bottom-navigation>
   </div>
@@ -21,19 +39,15 @@
       activePage: String,
     },
     data: () => {
-      return {
-        value: undefined,
-        menuOptions: [
-          {label: 'Home', icon: 'mdi-home-variant-outline', route: 'dashboard'},
-          {label: 'Explore', icon: 'mdi-lightbulb-on-outline', route: 'explore'},
-          {label: 'Forum', icon: 'mdi-account-group-outline', route: 'forum'},
-          {label: 'Health', icon: 'mdi-bottle-tonic-plus-outline', route: 'report'},
-        ],
-      };
+      return {value: undefined};
     },
     computed: {
       color() {
         switch (this.value) {
+          // case 'dashboard': return '#00613C'
+          // case 'club': return 'teal'
+          // case 'ask-expert': return 'brown'
+          // case 'health': return 'indigo'
           default:
             return 'white';
         }
