@@ -4,7 +4,7 @@
       <v-btn
         v-for="{label, icon, route} in menuOptions"
         :key="label"
-        :value="route"
+        :value="label"
         @click="$router.push({name: route})"
       >
         <span>{{ label }}</span>

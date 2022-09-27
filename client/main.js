@@ -16,4 +16,7 @@ Meteor.startup(() => {
     router,
     vuetify,
   });
+  if (Meteor.isCordova) {
+    window.open = cordova.InAppBrowser.open;
+  }
 });
