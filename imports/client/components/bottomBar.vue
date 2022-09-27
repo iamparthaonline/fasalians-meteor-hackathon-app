@@ -1,10 +1,15 @@
 <template>
   <div class="bottom-bar-container">
     <v-bottom-navigation v-model="value" :background-color="color" light shift>
-      <v-btn v-for="{label,icon,route} in menuOptions" :key="label" :value="label" @click="$router.push({name: route})">
-        <span>{{label}}</span>
+      <v-btn
+        v-for="{label, icon, route} in menuOptions"
+        :key="label"
+        :value="route"
+        @click="$router.push({name: route})"
+      >
+        <span>{{ label }}</span>
 
-        <v-icon>{{icon}}</v-icon>
+        <v-icon>{{ icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
   </div>
@@ -23,7 +28,7 @@
           {label: 'Explore', icon: 'mdi-lightbulb-on-outline', route: 'explore'},
           {label: 'Forum', icon: 'mdi-account-group-outline', route: 'forum'},
           {label: 'Health', icon: 'mdi-bottle-tonic-plus-outline', route: 'report'},
-        ]
+        ],
       };
     },
     computed: {
