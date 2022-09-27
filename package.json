@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/runtime": "^7.17.9",
     "axios": "^0.27.2",
+    "imagekit": "^4.1.1",
     "luxon": "^3.0.3",
     "meteor-node-stubs": "^1.2.1",
     "vue": "^2.6.14",

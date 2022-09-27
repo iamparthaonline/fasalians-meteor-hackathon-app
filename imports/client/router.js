@@ -30,6 +30,30 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/forum',
+      name: 'forum',
+      component: () => import('./pages/forum/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/forum/:userId',
+      name: 'user-forum',
+      component: () => import('./pages/forum/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/post/:id',
+      name: 'post',
+      component: () => import('./pages/forum/postDetail.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
       path: '*',
       name: 'notFound',
       component: () => import('./pages/404/index.vue'),
