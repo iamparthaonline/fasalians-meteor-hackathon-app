@@ -8,7 +8,12 @@
     <div class="dashboard-page">
       <Digest />
       <div class="my-2 text-center">
-        <v-btn v-if="user.profile.isAdmin && !todaysDigest" outlined color="primary" @click="goToDigestCreation">
+        <v-btn
+          v-if="true || (user.profile.isAdmin && !todaysDigest)"
+          outlined
+          color="primary"
+          @click="goToDigestCreation"
+        >
           Add today's digest
         </v-btn>
       </div>

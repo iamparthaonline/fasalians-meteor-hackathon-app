@@ -38,6 +38,14 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/saved',
+      name: 'saved',
+      component: () => import('./pages/saved/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
       path: '/forum',
       name: 'forum',
       component: () => import('./pages/forum/index.vue'),
@@ -128,6 +136,14 @@ const router = new VueRouter({
       component: () => import('./pages/gamify/index.vue'),
       meta: {
         requiresAuth: true,
+      },
+    },
+    {
+      path: '/digest-form',
+      name: 'digest-form',
+      component: () => import('./pages/digest/dailyDigestForm.vue'),
+      meta: {
+        requiresAuth: false,
       },
     },
     {

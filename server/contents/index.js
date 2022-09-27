@@ -47,9 +47,8 @@ Meteor.methods({
         .map(({_id}) => _id);
       console.log('topicsWithArticles', topicsWithArticles);
       return topicsWithArticles;
-    } else {
-      const primaryTopics = topics.find({isPrimary: true}).fetch();
-      return primaryTopics.map(({topic}) => topic);
     }
+    const primaryTopics = topics.find({isPrimary: true}).fetch();
+    return primaryTopics.map(({topic}) => topic);
   },
 });
