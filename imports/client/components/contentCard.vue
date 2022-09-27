@@ -68,6 +68,7 @@
     },
     methods: {
       openArticle() {
+        Meteor.call('trackPoints', 'READ_CONTENT');
         window.open(this.cardData.contentUrl, '_blank', 'location=yes');
       },
       unSave() {
