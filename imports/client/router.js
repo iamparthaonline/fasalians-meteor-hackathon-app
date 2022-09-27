@@ -33,10 +33,30 @@ const router = new VueRouter({
       path: '/explore',
       name: 'explore',
       component: () => import('./pages/explore/index.vue'),
-      beforeEnter: (_, _1, next) => {
-        if (!Meteor.userId()) next({name: 'login', replace: true});
-        else next();
+      meta: {
+        requiresAuth: true,
       },
+    },
+    {
+      path: '/forum',
+      name: 'forum',
+      component: () => import('./pages/forum/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/forum/:userId',
+      name: 'user-forum',
+      component: () => import('./pages/forum/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/post/:id',
+      name: 'post',
+      component: () => import('./pages/forum/postDetail.vue'),
       meta: {
         requiresAuth: true,
       },
@@ -66,6 +86,30 @@ const router = new VueRouter({
       path: '/edit-profile',
       name: 'editProfile',
       component: () => import('./pages/editProfile/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/report',
+      name: 'report',
+      component: () => import('./pages/report/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/report-details/:id',
+      name: 'report-details',
+      component: () => import('./pages/reportDetails/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/report-list',
+      name: 'report-list',
+      component: () => import('./pages/reportsList/index.vue'),
       meta: {
         requiresAuth: true,
       },

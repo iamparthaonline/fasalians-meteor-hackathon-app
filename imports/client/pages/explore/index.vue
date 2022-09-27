@@ -6,12 +6,9 @@
       :is-icon-active="true"
       @handle-click="$router.push({name: 'saved'})"
     />
-    <v-tabs grow class="mb-4">
-      <v-tab @click="activeView = 'latest'">Latest</v-tab>
-    </v-tabs>
 
     <div v-if="activeView === 'latest'">
-      <div class="mx-3">
+      <div class="mx-4">
         <v-text-field v-model="search" placeholder="Search.." label="Search">
           <v-icon slot="append">mdi-magnify</v-icon>
         </v-text-field>
