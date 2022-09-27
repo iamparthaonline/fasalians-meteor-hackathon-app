@@ -122,6 +122,14 @@ const router = new VueRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/gamify',
+      name: 'gamify',
+      component: () => import('./pages/gamify/index.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
   ],
   mode: 'history',
 });

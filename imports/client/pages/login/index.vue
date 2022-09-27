@@ -7,7 +7,7 @@
       <h2 class="heading">
         Love Agriculture ?
         <br />
-        <span>Grow with Agrihood</span>
+        <span>Grow with AgriSquad</span>
       </h2>
       <ul>
         <li>🙌 Latest updates in agriculture</li>
