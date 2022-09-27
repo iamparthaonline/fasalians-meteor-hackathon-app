@@ -59,7 +59,7 @@
             {{ user.profile.points || 0 }} points
           </span>
           |
-          <span class="coins">{{ user.profile.coins || 0 }} Fasal Coins</span>
+          <span class="coins">{{ user.profile.coins || 0 }} Agri Coins</span>
         </div>
       </div>
       <div class="interests">
