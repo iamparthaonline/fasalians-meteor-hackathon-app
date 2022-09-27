@@ -4,6 +4,9 @@
       <TopNavBar :title="userName ? `${userName}'s posts` : 'Forum'" :is-back-button="userName" />
     </div>
     <div class="postContainer mb-12">
+      <div v-if="loading">
+        <PostLoader v-for="i in 3" :key="i" />
+      </div>
       <ForumCard v-for="post in postList" :key="post._id" :author="post.user" :post="post" />
     </div>
     <div class="text-center" v-if="!userName && !loading">
@@ -33,7 +36,7 @@
         </v-sheet>
       </v-bottom-sheet>
     </div>
-    <BottomNavBar active-page="forum" />
+    <BottomNavBar activePage="forum" />
   </v-app>
 </template>
 
@@ -42,6 +45,7 @@
   import ForumCard from './forumCard.vue';
   import BottomNavBar from '../../components/bottomBar.vue';
   import TopNavBar from '../../components/topNavBar.vue';
+  import PostLoader from './postLoader.vue';
 
   export default {
     name: 'FarmerForum',
@@ -50,6 +54,7 @@
       CreatePost,
       BottomNavBar,
       TopNavBar,
+      PostLoader,
     },
     data() {
       return {
@@ -72,7 +77,17 @@
         this.getAllPosts();
       },
       getAllPosts() {
-        // Need to Create Meteor Method for Getting All the Posts
+        this.loading = true;
+        Meteor.call('getAllForumPosts', this.userIdFor, (err, res) => {
+          if (!err && res) {
+            if (!this.userIdFor) this.postList = res;
+            else {
+              this.userName = res.userDetails.profile.name;
+              this.postList = res.posts;
+            }
+          }
+          this.loading = false;
+        });
       },
     },
   };

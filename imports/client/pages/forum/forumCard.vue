@@ -79,7 +79,11 @@
     methods: {
       likePost(isLiked) {
         this.liked = isLiked;
-        // Need to Create a Meteor Method for Like Post
+        Meteor.call('likeForumPost', isLiked, Meteor.user()._id, this.post._id, (err, res) => {
+          if (!err) {
+            this.noOfLikes = res.likes.length;
+          }
+        });
       },
       checkCurrentUserLikedPost() {
         if (this.post.likes.indexOf(Meteor.user()._id) > -1) {

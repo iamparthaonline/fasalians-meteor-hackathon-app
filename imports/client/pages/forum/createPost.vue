@@ -34,12 +34,18 @@
     methods: {
       createPost() {
         this.loading = true;
-        // Need to Create Meteor Method to Upload The Image and Create Post
+        Meteor.call('getAuthEndPoint', this.path, 'abc.jpg', this.description, (err, res) => {
+          if (!err && res) {
+            this.$emit('submitPost');
+            this.path = undefined;
+            this.description = '';
+          }
+          this.loading = false;
+        });
       },
       insertImage() {
         navigator.camera.getPicture(
           imageData => {
-            console.log(imageData, 'IMageData');
             this.path = `data:image/jpeg;base64,${imageData}`;
           },
           cameraError => {
@@ -54,7 +60,6 @@
       takePhoto() {
         navigator.camera.getPicture(
           imageData => {
-            console.log(imageData, 'IMageData');
             this.path = `data:image/jpeg;base64,${imageData}`;
           },
           cameraError => {
@@ -66,15 +71,9 @@
           },
         );
       },
-      getEndpoint() {
-        Meteor.call('getAuthEndPoint', this.path, 'abc.jpg', (err, res) => {
-          console.log(err, res);
-        });
-      },
 
       // Only For Website
       async ShowPreview(e) {
-        console.log(e.target.files[0]);
         const base64 = await this.convertBase64(e.target.files[0]);
         this.path = base64;
       },

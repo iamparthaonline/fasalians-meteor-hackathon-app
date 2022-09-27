@@ -145,7 +145,11 @@
         this.commentLoading = true;
         this.pageOffset = 0;
         this.commentList = [];
-        // Need a Meteor Method For Posting the Comment
+        Meteor.call('postComment', this.$route.params.id, this.commentText, (err, res) => {
+          this.loadAllComments();
+          this.commentLoading = false;
+          this.commentText = '';
+        });
       },
       getPostDetail(postId) {
         Meteor.call('getPostDetails', postId, (err, res) => {
@@ -157,11 +161,21 @@
         });
       },
       getCommentCount() {
-        // Meteor Method For Getting Comment Count
+        Meteor.call('getCommentCount', this.$route.params.id, (err, res) => {
+          this.noOfComments = res || 0;
+        });
       },
       loadAllComments() {
         this.loading = true;
-        // Load All Comments
+        const {commentList} = this;
+        Meteor.call('getAllComments', this.$route.params.id, this.pageSize, this.pageOffset, (err, res) => {
+          if (res) {
+            this.commentList = [...commentList, ...res];
+            this.pageOffset += 1;
+          }
+          this.loading = false;
+          this.getCommentCount();
+        });
       },
       onIntersect() {
         // Pagination
@@ -178,7 +192,11 @@
       },
       likePost(isLiked) {
         this.liked = isLiked;
-        // Meteor Method For Liking The Post
+        Meteor.call('likeForumPost', isLiked, Meteor.user()._id, this.postData._id, (err, res) => {
+          if (!err) {
+            this.noOfLikes = res.likes.length;
+          }
+        });
       },
     },
   };
