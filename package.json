@@ -5,7 +5,9 @@
     "start": "export MONGO_URL='mongodb://fasalians:5GFP5XygcNxwqoBO@ac-hoorrhd-shard-00-00.xadw3oy.mongodb.net:27017,ac-hoorrhd-shard-00-01.xadw3oy.mongodb.net:27017,ac-hoorrhd-shard-00-02.xadw3oy.mongodb.net:27017/?ssl=true&replicaSet=atlas-iqrvpc-shard-0&authSource=admin&retryWrites=true&w=majority' && meteor run --settings=settings.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "build-app": "meteor build ../output --server=https://agrisquad.meteorapp.com",
+    "generate-apk": "bundletool build-apks --bundle=../output/android/project/app/release/app-release.aab --output=output.apks --mode=universal"
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",

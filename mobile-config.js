@@ -4,7 +4,7 @@ App.info({
   description: 'Agricultural Super App made for Meteor Hackathon by Team fasalians',
   author: 'Team Fasalians',
   email: 'partha.roy@wolkus.com',
-  website: 'agrisquad.meteorapp.com',
+  website: 'https://agrisquad.meteorapp.com',
 });
 
 App.icons({
