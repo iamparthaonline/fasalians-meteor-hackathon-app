@@ -19,5 +19,14 @@ Meteor.startup(() => {
   });
   if (Meteor.isCordova) {
     window.open = cordova.InAppBrowser.open;
+    universalLinks.subscribe('sharePost', function (eventData) {
+      const shareParameters = eventData.path.split('/post')[1];
+      alert(`shareEvent: ${JSON.stringify(eventData)}`);
+
+      if (shareParameters) {
+        const linkToOpen = `/post${shareParameters}`;
+        router.push({path: linkToOpen});
+      }
+    });
   }
 });
