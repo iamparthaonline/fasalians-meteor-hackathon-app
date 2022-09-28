@@ -15,9 +15,7 @@ Meteor.methods({
   getFilterContents(topic) {
     return contents
       .find({
-        topics: {
-          $all: [topic],
-        },
+        'primaryTopics.topic': topic,
       })
       .fetch();
   },
@@ -30,10 +28,10 @@ Meteor.methods({
               isApproved: true,
             },
           },
-          {$unwind: '$topics'},
+          {$unwind: '$primaryTopics'},
           {
             $group: {
-              _id: '$topics.topic',
+              _id: '$primaryTopics.topic',
               numberOfArticles: {
                 $sum: 1,
               },

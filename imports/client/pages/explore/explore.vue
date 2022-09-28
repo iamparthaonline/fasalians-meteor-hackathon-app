@@ -88,12 +88,7 @@
         result: [],
         search: '',
         primaryTopicsList: [
-          'All',
-          'Food Security',
-          'Organic Products',
-          'Bihar Government',
-          'Ministry of Agriculture',
-          'United States',
+          'All'
         ],
         isLoading: false,
         list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
