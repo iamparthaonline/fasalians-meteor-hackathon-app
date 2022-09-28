@@ -7,21 +7,21 @@
         <ContentLoader v-for="i in 3" :key="i" />
       </div>
       <ContentCard v-for="(cardData, index) in result" :key="index" :card-data="cardData.contentDesc" />
-      <!-- <ToastContainer :notification-data="notifiData" /> -->
+      <ToastContainer :notification-data="notifiData" />
     </div>
   </div>
 </template>
 
 <script>
   import ContentCard from '../../components/contentCard.vue';
-  //   import ToastContainer from '../../components/toastContainer.vue';
+  import ToastContainer from '../../components/toastContainer.vue';
   import TopNavBar from '../../components/topNavBar.vue';
   import ContentLoader from '../../components/contentLoader.vue';
 
   export default {
     components: {
       ContentCard,
-      //   ToastContainer,
+      ToastContainer,
       TopNavBar,
       ContentLoader,
     },
