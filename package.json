@@ -7,7 +7,7 @@
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
     "build-app": "meteor build ../output --server=https://agrisquad.meteorapp.com",
-    "generate-apk": "bundletool build-apks --bundle=../output/android/project/app/release/app-release.aab --output=output.apks --mode=universal",
+    "generate-apk": "bundletool build-apks --bundle=../output/android/project/app/release/app-release.aab --output=output.apks --mode=universal && mv output.apks output.zip && unzip output.zip && rm output.zip && rm toc.pb",
     "deploy": "DEPLOY_HOSTNAME=us-east-1.galaxy-deploy.meteor.com meteor deploy --settings settings.json agrisquad.meteorapp.com"
   },
   "dependencies": {
