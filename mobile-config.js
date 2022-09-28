@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 App.info({
   id: 'com.meteorapp.agrisquad',
   name: 'AgriSquad',
