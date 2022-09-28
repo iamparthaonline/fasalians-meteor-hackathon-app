@@ -49,4 +49,7 @@ Meteor.methods({
     const primaryTopics = topics.find({isPrimary: true}).fetch();
     return primaryTopics.map(({topic}) => topic);
   },
+  getAllContents() {
+    return contents.find({}).fetch();
+  },
 });

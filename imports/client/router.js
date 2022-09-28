@@ -154,6 +154,14 @@ const router = new VueRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/digest',
+      name: 'digestContent',
+      component: () => import('./pages/dailyDigest/index.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
   ],
   mode: 'history',
 });
