@@ -12,6 +12,9 @@ Meteor.methods({
       )
       .fetch();
   },
+  getAllContents() {
+    return contents.find({isApproved: true}).fetch();
+  },
   getFilterContents(topic) {
     return contents
       .find({
