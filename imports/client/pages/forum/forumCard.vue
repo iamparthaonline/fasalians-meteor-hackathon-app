@@ -25,9 +25,16 @@
         <v-btn class="my-4 ml-2" text icon color="black lighten-2" @click="$router.push({path: `/post/${post._id}`})">
           <v-icon>mdi-comment-outline</v-icon>
         </v-btn>
-        <v-btn class="my-4 ml-2" text icon color="black lighten-2">
+        <v-btn
+          class="my-4 ml-2"
+          text
+          icon
+          color="black lighten-2"
+          @click="window.plugins.socialsharing.share(`https://agrisquad.meteorapp.com/post/${post._id}`)"
+        >
           <v-icon>mdi-share-variant</v-icon>
         </v-btn>
+        <button onclick="window.plugins.socialsharing.share('Message only')">message only</button>
       </v-row>
       <v-btn class="my-2 ml-2" text icon color="black lighten-2">
         <v-icon>mdi-bookmark-outline</v-icon>

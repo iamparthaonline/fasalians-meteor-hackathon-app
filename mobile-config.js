@@ -50,3 +50,11 @@ App.appendToConfig(`
     <application android:usesCleartextTraffic="true"></application>
   </edit-config>
 `);
+
+App.appendToConfig(`
+  <universal-links>
+    <host name="agrisquad.meteorapp.com" scheme="https">
+      <path event="sharePost" url="/post/*" />
+    </host>
+  </universal-links>
+`);
