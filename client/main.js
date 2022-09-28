@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import {DateTime as luxon} from 'luxon';
+import VueRouter from 'vue-router';
 import '../imports/client/plugins/index';
 import '../imports/client/mixins/index';
 import '../imports/client/components/index';
@@ -21,11 +22,9 @@ Meteor.startup(() => {
     window.open = cordova.InAppBrowser.open;
     universalLinks.subscribe('sharePost', function (eventData) {
       const shareParameters = eventData.path.split('/post')[1];
-      alert(`shareEvent: ${JSON.stringify(eventData)}`);
-
       if (shareParameters) {
         const linkToOpen = `/post${shareParameters}`;
-        router.push({path: linkToOpen});
+        VueRouter.push({path: linkToOpen});
       }
     });
   }
