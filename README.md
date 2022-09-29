@@ -38,3 +38,10 @@ Install Meteor in your system first. Then run below commands,
 ## Low Fidelity Idea Wireframe
 
 ![App Mockup](https://i.ibb.co/x1v9TnW/Team-Fasalians-Meteor-Hackathon-2022.png)
+
+## Plant Health Analysis Model
+
+The AI model is built using a transfer learning approach based on Inception v3, as transfer learning reduces training time. The model was trained over the subset of images of Apple, Grapes, & Tomato obtained from Plant Village Dataset and classified into the disease classes for the same like scab, black rot , for apple and similarly for others.
+To serveThe model is built using Tensorflow, and deployed using tensorflow lite and served via REST API call.
+
+![Repositary link](https://github.com/cOsprey/hackathonMeteor)
